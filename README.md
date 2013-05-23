@@ -1,18 +1,17 @@
-Toad.com.br
-===========
+#WP-Base
 
-  A theme's wordpress for toad.com.br
+Template base para wordpress
 
-Installation
+## Installation
 ------------
 
   Copy to theme folder
 
-Usage
+##Usage
 -----
   todo
 
-Plugins
+##Plugins
 -----
-KenBurns Sliders
+
 

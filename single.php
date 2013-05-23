@@ -1,7 +1,7 @@
 <? get_header() ?>
 <!-- /header -->
 <!-- content -->
-<div class="clearfix" > 	
+<div class="clearfix" >
   <div id="content" >
     <h3><? is_home() ? "Not&iacute;cias" : single_cat_title() ?></h3>
     <!-- Start the Loop. -->
@@ -12,11 +12,11 @@
       <!-- Otherwise, the div box will be given the CSS class "post". -->
 
       <div id="post-<?php the_ID(); ?>" <?php post_class('clearfix post-list single-post'); ?>>
-        <div class="comment-square"><?php comments_popup_link('0', '1', '%'); ?></div>					
-        
+        <div class="comment-square"><?php comments_popup_link('0', '1', '%'); ?></div>
+
         <!-- Display a comma separated list of the Post's Categories. -->
         <h3 class="postmetadata post-category">>> _<?php the_category(', _'); ?></h3>
-        
+
         <!-- Display the Title as a link to the Post's permalink. -->
         <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 
@@ -30,13 +30,13 @@
         </div>
 
       </div> <!-- closes the first div box -->
-      
+
       <!-- Stop The Loop (but note the "else:" - see next line). -->
       <?php endwhile; else: ?>
 
       <!-- The very first "if" tested to see if there were any Posts to -->
       <!-- display.  This "else" part tells what do if there weren't any. -->
-      <p>Desculpe mas o que voc� procura n�o est� aqui!.</p>
+      <p>Desculpe mas o que você procura não está aqui!.</p>
 
       <!-- REALLY stop The Loop. -->
     <?php endif; ?>
@@ -48,7 +48,7 @@
     </nav><!-- #nav-single -->
   <?php //comment_form(); ?>
   <!-- COmments -->
-  <?php #comments_template(); ?> 
+  <?php #comments_template(); ?>
   <?php #echo do_shortcode('[fbcomments]'); ?>
   <!-- /comment -->
   </div>

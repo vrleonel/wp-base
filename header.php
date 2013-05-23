@@ -2,16 +2,16 @@
 <html <?php language_attributes(); ?>>
 <head profile="http://gmpg.org/xfn/11">
   <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-  <title><?php 
-    if (is_home () ) { 
-      bloginfo('name'); 
-    } elseif (is_category() || is_tag()) { 
-      single_cat_title(); 
-      echo ' &bull; ' ; bloginfo('name'); 
-    } elseif (is_single() || is_page()) { 
-      single_post_title(); 
-    } else { 
-      wp_title('',true); 
+  <title><?php
+    if (is_home () ) {
+      bloginfo('name');
+    } elseif (is_category() || is_tag()) {
+      single_cat_title();
+      echo ' &bull; ' ; bloginfo('name');
+    } elseif (is_single() || is_page()) {
+      single_post_title();
+    } else {
+      wp_title('',true);
     } ?>
   </title>
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
@@ -27,8 +27,8 @@
     <div id="container">
       <div	id="header" class="clearfix">
         <h1 class="align-left">
-          <a href="/" alt="Home - toad.com.br" title="Home - toad.com.br">
-            <img src="<?php bloginfo('template_directory'); ?>/images/logo.png" width="350" alt="toad.com.br"/>
+          <a href="/" alt="Home - <?php bloginfo('name') ?>" title="Home - <?php bloginfo('name') ?>">
+            <img src="<?php bloginfo('template_directory'); ?>/images/logo.png" width="350" alt="<?php bloginfo('name') ?>"/>
           </a>
         </h1>
 
@@ -40,7 +40,7 @@
         <div class="align-right">
           <?php get_search_form( $echo ); ?>
         </div>
-      </div>	
+      </div>
 
       <div id="nav">
         <?php wp_nav_menu( array('menu' => 'nav' )); ?>
